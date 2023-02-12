@@ -11,3 +11,4 @@ void img_framy(struct color c, int x1, int y1);
 void flash(int n);
 void f_mov_framy(int i);
 void HP(int x, int y);
+void furemi_c(int x, int y);
