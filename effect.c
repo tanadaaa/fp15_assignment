@@ -5,3 +5,7 @@
 static unsigned char buf[HEIGHT][WIDTH][3];
 static int filecnt = 0;
 static char fname[100];
+
+int color_change(struct color c){
+    
+}

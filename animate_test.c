@@ -9,4 +9,8 @@ int main(void) {
   for(i = 0;i < 80; i++){
     f_mov_framy(i);
   }
+  for(i = 0;i < 80;i++){
+    HP(100,100);
+    img_write();
+  }
 }

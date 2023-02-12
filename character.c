@@ -6,6 +6,26 @@ static unsigned char buf[HEIGHT][WIDTH][3];
 static int filecnt = 0;
 static char fname[100];
 
+
+void HP(int x, int y){
+    struct color black = { 0, 0, 0 };
+    int arr[8][18] = {{1,1,1,0,0,0,1,1,0,0,1,1,1,1,1,1,1,1},
+                      {1,1,1,0,0,0,1,1,0,0,1,1,1,1,1,1,1,1},
+                      {1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,1,1},
+                      {1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,1,1},
+                      {1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1},
+                      {1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1},
+                      {1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,0,0},
+                      {1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,0,0}};
+    int i,j;
+    for(i = 0;i < 8;i++){
+        for(j = 0;j < 18;j++){
+            if(arr[i][j])img_putpixel(black,x+j,y-i);
+        }
+    }
+}
+
+
 void img_framy(struct color c, int x1, int y1) {
     img_rectangle(c, x1+40, y1, x1+120, y1-40); // 胴体
     img_rectangle(c, x1+15, y1+25, x1+50, y1-10); // 顔
