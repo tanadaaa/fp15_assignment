@@ -61,6 +61,6 @@ void img_framy(struct color c, int x1, int y1) {
     img_rectangle(c, x1+62, y1-45, x1+72, y1-68); // 右前脚
     img_rectangle(c, x1+87, y1-48, x1+97, y1-71); // 左後脚
     img_rectangle(c, x1+108, y1-45, x1+118, y1-68); // 右後脚
-    img_fillcircle(c, x1+23, y1+10, 1); // 左目
-    img_fillcircle(c, x1+35, y1+10, 1); // 右目
+    img_fillrect(c, x1+23, y1+10, x1+24, y1+9); // 左目
+    img_fillrect(c, x1+35, y1+10, x1+36, y1+9); // 右目
 }
