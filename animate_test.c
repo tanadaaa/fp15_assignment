@@ -11,7 +11,8 @@ int main(void) {
   }
   for(i = 0;i < 80;i++){
     img_clear();
-    furemi_c(100, 100);
+    framy_c(100, 100);
+    mickey_c(100,50);
     img_write();
   }
 }

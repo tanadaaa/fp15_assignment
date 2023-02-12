@@ -23,4 +23,5 @@ void img_hp_mickey(int x, int y, int hp);
 void flash(int n);
 void f_mov_framy(int i);
 void HP(int x, int y);
-void furemi_c(int x, int y);
+void framy_c(int x, int y);
+void mickey_c(int x, int y);
