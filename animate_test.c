@@ -19,9 +19,8 @@ int main(void) {
     img_clear();
     img_framy(black, 400, 400);
     img_hp_framy(30, 400, 100);
-    framy_c(100, 100);
-    mickey_c(100,50);
     img_hp_mickey(600, 200, 100);
+    img_mickey(black, 130, 150);
     img_write();
   }
 }
