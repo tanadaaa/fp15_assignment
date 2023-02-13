@@ -21,6 +21,7 @@ void img_hp_frame2(int x1, int y1);
 void img_hp_framy(int x, int y, int hp);
 void img_hp_mickey(int x, int y, int hp);
 void flash(int n);
+void rolling(void);
 void f_mov_framy(int i);
 void HP(int x, int y);
 void framy_c(int x, int y);
