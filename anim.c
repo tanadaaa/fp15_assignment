@@ -20,6 +20,6 @@ void flash(int n){
 
 void f_mov_framy(int i){
     img_clear();
-    img_framy(black, 680-i*7, 0);
+    img_framy(black, 680-i*7, 200);
     img_write();
 }

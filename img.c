@@ -16,7 +16,7 @@ void img_clear(void) {
 }
 
 void img_write(void) {
-    sprintf(fname, "C:/Users/Y.Taketo/github/fp15_assignment/ppmfile/img%04d.ppm", ++filecnt);
+    sprintf(fname, "ppmfile/img%04d.ppm", ++filecnt);
     FILE *f = fopen(fname, "wb");
     if(f == NULL) { fprintf(stderr, "can't open %s\n", fname); exit(1); }
     fprintf(f, "P6\n%d %d\n255\n", WIDTH, HEIGHT);
@@ -71,7 +71,7 @@ void img_rectangle(struct color c, int x1, int y1, int x2, int y2) {
 void img_fillrect(struct color c, int x1, int y1, int x2, int y2) {
     int i, j;
     for(i = x1; i <= x2; ++i) {
-        for(j = y1; j <= y2; ++j) {
+        for(j = y2; j <= y1; ++j) {
             img_putpixel(c, i, j);
         }
     }
