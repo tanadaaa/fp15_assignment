@@ -25,3 +25,4 @@ void f_mov_framy(int i);
 void HP(int x, int y);
 void framy_c(int x, int y);
 void mickey_c(int x, int y);
+void Level100_c(int x, int y);

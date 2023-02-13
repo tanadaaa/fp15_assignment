@@ -174,6 +174,7 @@ void img_hp_frame2(int x1, int y1) {
 
 void img_hp_framy(int x, int y, int hp) {
     framy_c(x+25, y+15);
+    Level100_c(x+101,y+15);
     HP(x+15, y-11);
     img_hp_frame1(x, y);
     img_hp_gage(x+40, y-10, hp);
@@ -181,6 +182,7 @@ void img_hp_framy(int x, int y, int hp) {
 
 void img_hp_mickey(int x, int y, int hp) {
     mickey_c(x-200, y+15);
+    Level100_c(x-146,y+15);
     HP(x-235, y-11);
     img_hp_frame2(x, y);
     img_hp_gage(x-210, y-10, hp);
