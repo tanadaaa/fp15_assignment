@@ -28,3 +28,4 @@ void framy_c(int x, int y);
 void mickey_c(int x, int y);
 void Level100_c(int x, int y);
 void img_mickey(struct color c,int x1, int y1);
+void Hyper_Beam(double x, double y, int i);

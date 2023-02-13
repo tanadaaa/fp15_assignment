@@ -46,3 +46,76 @@ void rolling(void){
         img_write();
     }
 }
+
+double fg(double d1, double d2){
+    return d1 * d2 /sqrt(25.0*25.0 + 27.0*27.0);
+}
+
+void Hyper_Beam(double x, double y, int i){
+    struct color black = {0,0,0};
+    struct color yellow = {255,255,0};
+    struct color white = {255,255,255};
+    if(i < 30){
+        double id = i;
+        double zsl = id*6.0*(25.0/27.0);
+        img_fillcircle(black,x+i*6,y+zsl,27);
+        img_fillcircle(yellow,x+i*6,y+zsl,25);
+        img_fillcircle(white,x+i*6,y+zsl,23);
+        if(i*6.0 >= fg(27,27)){
+            double mm = i*6.0-fg(27,27);
+            int j;
+            for(j = 0; j <= mm; j++){
+                double jd = j;
+                double dsl = jd*(25.0/27.0);
+                img_putpixel(black, x - fg(14,25) + 5 + j, y + fg(14,27) + dsl + 5);
+                img_putpixel(black, x - fg(13,25) + 5 + j, y + fg(13,27) + dsl + 5);
+                img_putpixel(black, x - fg(12,25) + 5 + j, y + fg(12,27) + dsl + 5);
+                img_putpixel(black, x - fg(11,25) + 5 + j, y + fg(11,27) + dsl + 5);
+                img_putpixel(yellow, x - fg(10,25) + 5 + j, y + fg(10,27) + dsl + 5);
+                img_putpixel(black, x + fg(14,25) + 5 + j, y - fg(14,27) + dsl + 5);
+                img_putpixel(black, x + fg(13,25) + 5 + j, y - fg(13,27) + dsl + 5);
+                img_putpixel(black, x + fg(12,25) + 5 + j, y - fg(12,27) + dsl + 5);
+                img_putpixel(black, x + fg(11,25) + 5 + j, y - fg(11,27) + dsl + 5);
+                img_putpixel(yellow, x + fg(10,25) + 5 + j, y - fg(10,27) + dsl + 5);
+            }
+        }
+    }
+    else if(i >= 30 && i < 60){
+        double mm = 30*6.0-fg(27,27);
+        int j;
+        for(j = 0; j <= mm; j++){
+            double jd = j;
+            double dsl = jd*(25.0/27.0);
+            img_putpixel(black, x - fg(14,25) + 5 + j, y + fg(14,27) + dsl + 5);
+            img_putpixel(black, x - fg(13,25) + 5 + j, y + fg(13,27) + dsl + 5);
+            img_putpixel(black, x - fg(12,25) + 5 + j, y + fg(12,27) + dsl + 5);
+            img_putpixel(black, x - fg(11,25) + 5 + j, y + fg(11,27) + dsl + 5);
+            img_putpixel(yellow, x - fg(10,25) + 5 + j, y + fg(10,27) + dsl + 5);
+            img_putpixel(black, x + fg(14,25) + 5 + j, y - fg(14,27) + dsl + 5);
+            img_putpixel(black, x + fg(13,25) + 5 + j, y - fg(13,27) + dsl + 5);
+            img_putpixel(black, x + fg(12,25) + 5 + j, y - fg(12,27) + dsl + 5);
+            img_putpixel(black, x + fg(11,25) + 5 + j, y - fg(11,27) + dsl + 5);
+            img_putpixel(yellow, x + fg(10,25) + 5 + j, y - fg(10,27) + dsl + 5);
+        }
+    }
+    else{
+        double mm = 30*6.0-fg(27,27);
+        int j;
+        for(j = 0; j <= mm; j++){
+            double jd = j;
+            double dsl = jd*(25.0/27.0);
+            if(j > (i-60)*6.0-fg(27,27)){
+                img_putpixel(black, x - fg(14,25) + 5 + j, y + fg(14,27) + dsl + 5);
+                img_putpixel(black, x - fg(13,25) + 5 + j, y + fg(13,27) + dsl + 5);
+                img_putpixel(black, x - fg(12,25) + 5 + j, y + fg(12,27) + dsl + 5);
+                img_putpixel(black, x - fg(11,25) + 5 + j, y + fg(11,27) + dsl + 5);
+                img_putpixel(yellow, x - fg(10,25) + 5 + j, y + fg(10,27) + dsl + 5);
+                img_putpixel(black, x + fg(14,25) + 5 + j, y - fg(14,27) + dsl + 5);
+                img_putpixel(black, x + fg(13,25) + 5 + j, y - fg(13,27) + dsl + 5);
+                img_putpixel(black, x + fg(12,25) + 5 + j, y - fg(12,27) + dsl + 5);
+                img_putpixel(black, x + fg(11,25) + 5 + j, y - fg(11,27) + dsl + 5);
+                img_putpixel(yellow, x + fg(10,25) + 5 + j, y - fg(10,27) + dsl + 5);
+            }
+        }
+    }
+}
