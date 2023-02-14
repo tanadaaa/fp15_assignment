@@ -26,7 +26,7 @@ void rolling(void){
     struct color white = { 255, 255, 255 };
     int i;
     for(i = 0;i < 30;i++){
-        img_clear;
+        img_clear();
         int j,k;
         for(j = 0; j < WIDTH; j++){
             for(k = 0; k < HEIGHT; k++){
